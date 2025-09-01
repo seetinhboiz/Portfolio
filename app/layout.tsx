@@ -8,8 +8,8 @@ import StairTransition from "@/components/StairTransition";
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: '--font-jetbrainsMono'
-})
+  variable: "--font-jetbrainsMono",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,8 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={jetbrainsMono.variable}>
+      <body className={jetbrainsMono.variable}>
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>
