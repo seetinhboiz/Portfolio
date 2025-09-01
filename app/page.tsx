@@ -6,8 +6,7 @@ import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
 export default function Home() {
-  const handleDownload = (e: any) => {
-    e.preventDefault();
+  const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "cv.pdf";
     link.download = "Truong-Trong-Nghia-CV.pdf";
@@ -23,7 +22,7 @@ export default function Home() {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Fullstack Developer</span>
             <h1 className="h1 mb-6">
-              Hello I'm
+              {`Hello I'm`}
               <br />
               <span className="text-accent">Truong Trong Nghia</span>
             </h1>
@@ -38,7 +37,7 @@ export default function Home() {
               <Button
                 variant={"outline"}
                 size={"lg"}
-                onClick={(e) => handleDownload(e)}
+                onClick={() => handleDownload()}
                 className="uppercase flex items-center gap-2 hover:cursor-pointer"
               >
                 <span>Download CV</span>
